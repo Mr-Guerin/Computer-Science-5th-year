@@ -1,1 +1,35 @@
+# ## Question 16(a) 
+# ## Lauren Ryan:
 
+#     ##(i) down 
+# print("welcome to the driving licence eligibility checker?")
+# age = int(input("What age are you? "))
+#  ## in this code it is asking the user to enter there age and this code cheacks if they are entitld to aplly for a driving licence
+# if (age >= 17):
+#     print("You entered", age)
+#     print("You are entitled to apply for a driving licence.")
+# if(age <=17):
+#      print("You are not entitled to apply for a driving licence.")
+
+
+#     ## part(v) down 
+# print("welcome to the driving licence eligibility checker")
+# name = input("What is your name?")
+# age = int(input("What age are you? "))
+# if (age >= 17):
+#     print("You entered", age)
+# print(name ,"You are entitled to apply for a three-year driving licence.")
+# if(age <=17):
+#      print("You are not entitled to apply for a driving licence.")
+
+
+
+#Question 16(b) 
+# Lauren Ryan:
+print("split Bill Calulator")
+bill= int(input("Enter the total amount of bill"))
+people = int(input("Enter the number of people that will be splitting the bill"))
+if(people >=2): # if people are highter then two split the bill
+    elif(people/=2)
+owe =( bill / people)
+    print("You each owe",owe)
