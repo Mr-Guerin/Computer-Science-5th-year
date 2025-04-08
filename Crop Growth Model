@@ -1,0 +1,29 @@
+import random  
+import matplotlib.pyplot as plt  
+
+# Variables  
+days = 20  
+crop_growth = 0  
+water = 50  
+fertiliser = 50  
+
+# Growth process  
+growth_progress = []  
+
+for day in range(days):  
+    if random.randint(0, 100) < water:  
+        crop_growth += 1  
+    if random.randint(0, 100) < fertiliser:  
+        crop_growth += 1  
+    water -= 2  
+    fertiliser -= 1  
+    growth_progress.append(crop_growth)  
+
+# Display graph  
+plt.plot(range(days), growth_progress)  
+plt.title("Crop Growth Over Time")  
+plt.xlabel("Days")  
+plt.ylabel("Growth Level")  
+plt.show()  
+
+print(f"Final Crop Growth: {crop_growth}") 
