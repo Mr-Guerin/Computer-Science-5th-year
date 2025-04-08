@@ -1,0 +1,28 @@
+import random  
+import matplotlib.pyplot as plt  
+
+# Variables  
+weeks = 10  
+students = 5  
+learning_rate = 5  
+engagement = 1.2  
+homework = 1.1  
+
+# Starting knowledge  
+student_knowledge = [random.randint(10, 30) for _ in range(students)]  
+knowledge_progress = []  
+
+# Learning process  
+for week in range(weeks):  
+    for i in range(students):  
+        student_knowledge[i] += learning_rate * engagement * homework  
+    knowledge_progress.append(sum(student_knowledge) / students)  
+
+# Display graph  
+plt.plot(range(weeks), knowledge_progress)  
+plt.title("Student Learning Simulation")  
+plt.xlabel("Weeks")  
+plt.ylabel("Average Knowledge Level")  
+plt.show()  
+
+print(f"Final Average Knowledge Level: {knowledge_progress[-1]}")  
