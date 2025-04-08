@@ -1,0 +1,22 @@
+import random  
+import matplotlib.pyplot as plt  
+
+# Team stats  
+team_a_goals = 0  
+team_b_goals = 0  
+
+# 90-minute match simulation  
+for minute in range(90):  
+    if random.randint(0, 100) < 50:  # 50% chance of an attack  
+        if random.randint(0, 100) < 30:  # 30% chance of scoring  
+            if random.choice(["A", "B"]) == "A":  
+                team_a_goals += 1  
+            else:  
+                team_b_goals += 1  
+
+# Display results  
+plt.bar(["Team A", "Team B"], [team_a_goals, team_b_goals], color=["blue", "red"])  
+plt.title("Football Match Simulation")  
+plt.show()  
+
+print(f"Final Score: Team A {team_a_goals} - {team_b_goals} Team B")  
